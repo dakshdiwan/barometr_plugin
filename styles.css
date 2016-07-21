@@ -1,0 +1,35 @@
+body{
+  font-family: Economica, sans-serif;
+}
+
+#logo{
+  margin: 0 auto;
+  display: block;
+}
+
+#charts{
+  width: 615px;
+  margin: 0 auto;
+}
+
+#charts div{
+  display: inline-block;
+}
+
+#links{
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+#links a{
+  text-decoration: none;
+  font-size: 20px;
+  text-align: center;
+}
+
+#divider{
+  margin: 0 auto;
+  display: block;
+}

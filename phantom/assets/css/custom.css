@@ -1,0 +1,82 @@
+#img0{
+  position: relative;
+}
+
+#img1{
+  position: relative;
+}
+
+#img2{
+  position: relative;
+}
+
+#imgtitle0{
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  line-height: 20px;
+  display: block;
+}
+
+#imgtxt0{
+  position: absolute;
+  top: 150px;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  display: block;
+}
+
+
+#imgtitle1{
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  line-height: 20px;
+  display: block;
+}
+
+#imgtxt1{
+  position: absolute;
+  top: 150px;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  display: block;
+}
+
+
+#imgtitle2{
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  line-height: 20px;
+  display: block;
+}
+
+#imgtxt2{
+  position: absolute;
+  top: 150px;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  display: block;
+}

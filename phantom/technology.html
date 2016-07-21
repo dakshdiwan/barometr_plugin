@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>barometr</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+							<p align="center">
+								<a href="index.html" class="logo">
+									<span class="symbol" align="center"><img align="center" src="images/logo.jpg" width="500" height="60"/></span>
+								</a>
+							</p>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<h2>Menu</h2>
+					<ul>
+						<li><a href="index.html">About</a></li>
+						<li><a href="barometrs.html">barometr Samples</a></li>
+						<li><a href="technology.html">Technology</a></li>
+						<li><a href="download.html">Download</a></li>
+					</ul>
+				</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h2>MACHINE LEARNING MODEL - NEURAL NETWORK</h2>
+							<h3 valign="center">To determine political bias, we have created a neural network. Essentially what we do is pull each word from an article and create a new node for that word.
+							At first that node is given an arbitrary value from 0 to 1 (0 being no right bias and 1 being strongly right biased). That node is also given a weight. All the nodes in the article
+							are summed up to give a final score from 0 to 1 which determines the overall article bias. As more articles are looked at, our model learns. That is how our bias indicator improves over time.
+							The model adjusts it's weights and values accordingly.
+							<br><br>
+							<p align="center">
+							<img src="http://i.stack.imgur.com/84WUh.png" width="600" height="500"></img>
+							</p>
+							The neural network model powers Barometr on the backend to serve bias indicator and sentiment measurements for the articles.</h3>
+							<h2>CHROME EXTENTION</h2>
+							<h3>We created a Chrome extension through web development in Javascript and HTML. The biggest challenge was realizing and designing the extension architecture.
+							<br><br>
+							Our control flow begins with content.js in the extension.
+							The content.js file retrieves the text from the website the user is currently reading. We read the text by
+							essentially considering each webpage as a tree. Our code does a DFS traversal to extract the element and then the node, or text, within the element. As we extract the text,
+							we build a JSON output string. We then send the JSON output to the server for processing.
+							<br><br>
+							Once the server has processed the webpage text and performed the analysis, we GET the JSON output through the popup.js file in the extension.
+							The JSON is then input into the barometer UI code which renders the extension popup visualization.
+							<br><br>
+							The general architecture is reflected in the main manifest.json file. Here we indicate the default_popup as popup.html which is our popup UI that has popup.js in the backend.
+							Our content script is content.js which is the script that pulls the text from the webpage.</h3>
+							<h2>AMAZON WEB SERVICES</h2>
+							<h3 valign="center">We set up an EC2 node to host our services. The AWS node is our server backend where we receive and send information to. This is how our Chrome extension is
+							connected to our neural network.</h3>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									<div class="field half first">
+										<input type="text" name="name" id="name" placeholder="Name" />
+									</div>
+									<div class="field half">
+										<input type="email" name="email" id="email" placeholder="Email" />
+									</div>
+									<div class="field">
+										<textarea name="message" id="message" placeholder="Message"></textarea>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="special" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
+									<li><a href="#" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon style2 fa-500px"><span class="label">500px</span></a></li>
+									<li><a href="#" class="icon style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; barometr. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
